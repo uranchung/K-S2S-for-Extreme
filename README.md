@@ -3,9 +3,7 @@ Development of post-correction skill to improve sub-seasonal to seasonal climate
  
 
 # Transformation
-- Scalers 
-
-- Transformers 
+- Scalers and Transformers used
 
 
 
