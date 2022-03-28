@@ -8,6 +8,9 @@ The most common data preparation in machine learning is examining the expectatio
 # Transformation
 - Scalers and Transformers used
 
+It is more important to confirm the results of data scaling methods through repeated experiments and evaluation of data transformation rather than assuming that a given data preparation scheme will work best based on the observed distribution of the data.
+
+
 
 
 # Data Transformation Process based on Grid Search for S2S  
