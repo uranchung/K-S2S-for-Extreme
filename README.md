@@ -97,7 +97,7 @@ This repository provides historical data on climate extremes across the East Asi
 
 
 ## Reference
-  Westby, Rebecca Marie et al. “Anomalous Temperature Regimes during the Cool Season: Long-Term Trends, Low-Frequency Mode Modulation, and Representation in CMIP5 Simulations.” Journal of Climate 26 (2013): 9061-9076  
+  Westby, 
   Hobday, A.J. et al. (2016), A hierarchical approach to defining marine heatwaves, Progress in Oceanography, 141, pp. 227-238, doi: 10.1016/j.pocean.2015.12.014  
   https://github.com/ecjoliver/marineHeatWaves  
 
