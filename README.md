@@ -16,9 +16,6 @@ This repository provides historical data on climate extremes across the East Asi
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*For HR90_D1G3,*  
 <img width="2020" height="462" alt="hr90_D1G3 era5 1940-2024 EA1 5 h" src="https://github.com/user-attachments/assets/f0e9eb75-711e-4fda-ba99-ef7cb13127fa" />
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*For MHW90_D5G2,*  
-<img width="2020" height="462" alt="mhw90_D5G2 era5 1940-2024 EA1 5 h" src="https://github.com/user-attachments/assets/6e3c2f3d-58a0-4425-ab7d-7a970e717c8d" />
-
 ## Data Download
 
   ```
