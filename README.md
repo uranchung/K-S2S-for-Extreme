@@ -11,7 +11,7 @@ Additionally, it offers code for analyzing and visualizing key statistics and ch
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2D Maps of Event Frequency/Duration/Mean Intensity Change per Decade
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*For 90th Percentile, T2M, SST, PREC*  
-<img width="300" height="462" alt="t2m90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/b18b7249-32dc-46a4-aa30-059476a0af28" />
+<img width="150" height="231" alt="t2m90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/b18b7249-32dc-46a4-aa30-059476a0af28" />
 
 
 
