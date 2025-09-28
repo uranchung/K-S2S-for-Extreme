@@ -2,9 +2,9 @@
 
 Initiative for Developing an East Asia Climate Extremes Dataset!
 
-This repository provides historical data on climate extremes across the East Asia(EA) region, basically archiving **the events of regular grid-based climate extremes**, and **weekly/monthly extremeness metrics** can be utilized as labels for AI-assisted models to predict anomalous climate events in East Asia. These efforts are part of the climate extreme prediction project led by the ART/APCC team (AI-based prediction Research and Technology at the APEC Climate Center). Currently, the repository focuses on extreme phenomena such as ***anomalously high temperatures(AHT)***, ***heavy rainfall(HR)***, and ***marine heatwaves(MHW)***, with the potential for further expansion. Additionally, it offers code for analyzing and visualizing key statistics and characteristics of atmospheric and oceanic extremes. We hope this page serves as a meaningful and practical starting point for researchers diving into studies on the dynamics and prediction of extreme phenomena. 
-
-<img width="886" height="243" alt="image" src="https://github.com/user-attachments/assets/0a89440f-f957-4998-b83a-cc4ee6a481ce" />
+This repository provides historical data on climate extremes across the East Asia(EA) region, basically archiving **the events of regular grid-based climate extremes**, and **weekly/monthly extremeness metrics** can be utilized as labels for AI-assisted models to predict anomalous climate events in East Asia. 
+Currently, the repository focuses on extreme phenomena such as ***anomalously high temperatures(AHT)***, ***heavy rainfall(HR)***, and ***marine heatwaves(MHW)***, with the potential for further expansion. 
+Additionally, it offers code for analyzing and visualizing key statistics and characteristics of atmospheric and oceanic extremes. We hope this page serves as a meaningful and practical starting point for researchers diving into studies on the dynamics and prediction of extreme phenomena. 
 
 **Long-term Statistics of Climate Extremes**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2D Maps of Annual Mean Event Frequency/Duration/Mean Intensity  
@@ -45,7 +45,6 @@ This repository provides historical data on climate extremes across the East Asi
 |Type              |Original Timeseries, Climatological Long-Term Mean, 90/95th Percentile Thresholds(p90/p95)|
 |Resources         |ERA5, OISST(only for SST) and ECMWF-hindcast|
 |Ref. Period       |1991-2020(ERA5/OISST, WMO recommendation), 2004-2023(ECMWF-hindcast)|
-
 
 
 ***2. Extreme Event Profile***
