@@ -13,7 +13,7 @@ Additionally, it offers code for analyzing and visualizing key statistics and ch
 <img width="205" height="316" alt="sst90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/08a48f79-9213-4e5d-a4ba-9c871dc6cbe0" />
 <img width="205" height="316" alt="tp90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/1825ea6b-4ba7-461a-9a64-41fc86889fc7" />
 
-&nbsp;&nbsp
+&nbsp;&nbsp;
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Maps of Annual Mean Intensity at 90th Percentile for T2M, SST, PREC at version 2024***  
 
@@ -21,7 +21,7 @@ Additionally, it offers code for analyzing and visualizing key statistics and ch
 <img width="225" height="346" alt="sst90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/8e198470-a3ed-4593-b2bd-16f198cfe0fb" />
 <img width="225" height="346" alt="tp90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/16f8b99d-c530-4846-a1d2-7a56e9b59371" />
 
-&nbsp;&nbsp
+&nbsp;&nbsp;
 
 ## Usage  
 
