@@ -19,31 +19,11 @@ Additionally, it offers code for analyzing and visualizing key statistics and ch
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Maps of Annual Mean Intensity at 90th Percentile for T2M, SST, PREC at version 2024***  
 
-<img width="225" height="346" alt="t2m90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/e42b0728-11b4-49dc-851c-5be5c9688a23" />
-<img width="225" height="346" alt="sst90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/8e198470-a3ed-4593-b2bd-16f198cfe0fb" />
-<img width="225" height="346" alt="tp90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/16f8b99d-c530-4846-a1d2-7a56e9b59371" />
+<img width="205" height="316" alt="t2m90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/e42b0728-11b4-49dc-851c-5be5c9688a23" />
+<img width="205" height="316" alt="sst90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/8e198470-a3ed-4593-b2bd-16f198cfe0fb" />
+<img width="205" height="316" alt="tp90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/16f8b99d-c530-4846-a1d2-7a56e9b59371" />
 
 &nbsp;&nbsp;
-
-## Usage  
-
-### Codes for Data Processing and Visualization
-&nbsp;&nbsp;&nbsp;&nbsp;if codes given: how to read the data and to isolate/plot timeseries of specific grid point?  
-&nbsp;&nbsp;&nbsp;&nbsp;how about adding a table describing example codes given?  
-
-### Ouput Details
-&nbsp;&nbsp;&nbsp;&nbsp;if codes given: how to read the data and to isolate/plot timeseries of specific grid point?  
- 
-*for individual grid points within EA domain,*  
-  
-***1. Historical Event Statistics***  
-- List of Events: *AHT, HR, MHW*  
-- Event Statistics: Frequeny, Duration, Mean Intensity  
-- Daily/Weekly Timeseries and Extremeness  
-
-***2. Seasonality and Trend of Climate Extremes***  
-- Seasonal Evolution of Event Frequency/Duration/Mean Intensity  
-- Annual Timeseries of Frequency/Duration/Mean Intensity per Year and its Least-Squared Fitted Line
 
 - 
 ## Data Download
@@ -100,5 +80,24 @@ Additionally, it offers code for analyzing and visualizing key statistics and ch
 >*T2M_e = T2M - thr; TP_e = TP - thr; SST_e = SST - thr*  
 
 
+## How to use:   
+
+### Codes for Data Processing and Visualization
+&nbsp;&nbsp;&nbsp;&nbsp;if codes given: how to read the data and to isolate/plot timeseries of specific grid point?  
+&nbsp;&nbsp;&nbsp;&nbsp;how about adding a table describing example codes given?  
+
+### Ouput Details
+&nbsp;&nbsp;&nbsp;&nbsp;if codes given: how to read the data and to isolate/plot timeseries of specific grid point?  
+ 
+*for individual grid points within EA domain,*  
+  
+***1. Historical Event Statistics***  
+- List of Events: *AHT, HR, MHW*  
+- Event Statistics: Frequeny, Duration, Mean Intensity  
+- Daily/Weekly Timeseries and Extremeness  
+
+***2. Seasonality and Trend of Climate Extremes***  
+- Seasonal Evolution of Event Frequency/Duration/Mean Intensity  
+- Annual Timeseries of Frequency/Duration/Mean Intensity per Year and its Least-Squared Fitted Line
 
 
