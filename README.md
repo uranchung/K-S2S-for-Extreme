@@ -2,9 +2,8 @@
 
 Initiative for Developing an East Asia Climate Extremes Dataset!
 
-This repository provides historical data on climate extremes across the East Asia(EA) region, basically archiving **the events of regular grid-based climate extremes**, and **weekly/monthly extremeness metrics** can be utilized as labels for AI-assisted models to predict anomalous climate events in East Asia. 
-Currently, the repository focuses on extreme phenomena such as ***anomalously high temperatures(AHT)***, ***heavy rainfall(HR)***, and ***marine heatwaves(MHW)***, with the potential for further expansion. 
-Additionally, it offers code for analyzing and visualizing key statistics and characteristics of atmospheric and oceanic extremes. We hope this page serves as a meaningful and practical starting point for researchers diving into studies on the dynamics and prediction of extreme phenomena. 
+This repository provides ECMWF 2016 and 2024 Hindcast data on extreme events in East Asia, where **mean temperature(T2M)**, **sea surface temperature(SST)**, or **precipitation(TP)** exceed the 90th percentile. 
+
 
 &nbsp;
 
