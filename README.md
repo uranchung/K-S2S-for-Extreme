@@ -7,7 +7,7 @@ Currently, the repository focuses on extreme phenomena such as ***anomalously hi
 Additionally, it offers code for analyzing and visualizing key statistics and characteristics of atmospheric and oceanic extremes. We hope this page serves as a meaningful and practical starting point for researchers diving into studies on the dynamics and prediction of extreme phenomena. 
 
 **Long-term Statistics of Climate Extremes**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Maps of Annual Mean Occurrence at 90th Percentile for T2M, SST, PREC at version 2024***  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Maps of Annual Mean Occurrence at 90th Percentile for T2M, SST, PREC at version 2024***  
 
 <img width="205" height="316" alt="t2m90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/b18b7249-32dc-46a4-aa30-059476a0af28" /> 
 <img width="205" height="316" alt="sst90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/08a48f79-9213-4e5d-a4ba-9c871dc6cbe0" />
@@ -15,13 +15,13 @@ Additionally, it offers code for analyzing and visualizing key statistics and ch
 
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Maps of Annual Mean Intensity at 90th Percentile for T2M, SST, PREC at version 2024***  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Maps of Annual Mean Intensity at 90th Percentile for T2M, SST, PREC at version 2024***  
 
 <img width="225" height="346" alt="t2m90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/e42b0728-11b4-49dc-851c-5be5c9688a23" />
 <img width="225" height="346" alt="sst90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/8e198470-a3ed-4593-b2bd-16f198cfe0fb" />
 <img width="225" height="346" alt="tp90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/16f8b99d-c530-4846-a1d2-7a56e9b59371" />
 
-
+&nbsp;
 
 ## Usage  
 
