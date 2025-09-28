@@ -1,4 +1,4 @@
-# EastAsiaClimateExtremes
+# East Asia Climate Extremes from ECMWF Hindcast
 
 Initiative for Developing an East Asia Climate Extremes Dataset!
 
