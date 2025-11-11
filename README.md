@@ -1,108 +1,57 @@
 # Climate Extremes from ECMWF Hindcast
 
-Initiative for Developing an East Asia Climate Extremes Dataset!
+## ECMWF Hindcast 버전2016과 버전2024 자료에서 한반도를 포함한 동아시아 지역의 극한 정보 표출!
 
-This repository provides ECMWF 2016 and 2024 Hindcast data on extreme events in East Asia, where **mean temperature(T2M)**, **sea surface temperature(SST)**, or **precipitation(TP)** exceed the 90th percentile.   
+이 repository에서는 ECWMF 버전 2016과 버전 2024의 Hindcast 자료를 기반으로 동아시아 지역에서 **평균기온**, **해수면 온도**, **강수**가 90퍼센타일(예, T2M>=90 percentile)을 초과하는 이상 발생 정보(예, 발생 빈도 및 발생 강도 등)를 제공한다.  
+(English) This repository provides ECMWF 2016 and 2024 Hindcast data on extreme events in East Asia, where mean temperature, sea surface temperature, or precipitation exceed the 90th percentile.  
 &nbsp;  
-***Long-term Statistics of Climate Extremes:***  
-&nbsp; 
-&nbsp; 
-&nbsp;&nbsp;**at version 2016:** *Maps of Annual Mean Occurrence at 90th Percentile for T2M, SST, PREC*  
-<img width="194" height="300" alt="v16_t2m90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/6ccc3fa9-e8e7-493e-a6b9-d1d6beafe01d" />
-<img width="194" height="300" alt="v16_sst90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/19adaaed-d22c-4d68-b1ab-b5b3edcb3264" />
-<img width="194" height="300" alt="v16_tp90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/44968cac-334b-4b1d-8023-3ef0cf90d60f" />  
+***Spatial/Temporal Coverage for ECMWF Hindcast***  
+
+|               |Domain     |Resolution|
+|---------------|-----------|----------|
+|**Space**      |21-48N, 114-141E|1.5deg|
+|**Time**       |1940-2024(ERA5), 1982-2024(OISST)|Daily / Weekly|
+|**Data format**|NetCDF |
+|**Data download**| Google drive|
+
 &nbsp;  
-&nbsp;&nbsp;**at 2024 version:** *Maps of Annual Mean Occurrence at 90th Percentile for T2M, SST, PREC*  
-<img width="194" height="300" alt="t2m90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/b18b7249-32dc-46a4-aa30-059476a0af28" /> 
-<img width="194" height="300" alt="sst90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/08a48f79-9213-4e5d-a4ba-9c871dc6cbe0" />
-<img width="194" height="300" alt="tp90th_Occurrence_AnnualMean_20yr_w3-mean_domin" src="https://github.com/user-attachments/assets/1825ea6b-4ba7-461a-9a64-41fc86889fc7" />
-
-&nbsp;
-
-&nbsp;&nbsp;**at version 2016:** *Maps of Annual Mean Intensity at 90th Percentile for T2M, SST, PREC*    
-<img width="194" height="300" alt="v16_t2m90pct_mean_intensity_map_20yr_1996_2015" src="https://github.com/user-attachments/assets/a0602e16-0028-49be-b30e-f1b7601474e7" />
-<img width="194" height="300" alt="v16_sst90pct_mean_intensity_map_20yr_1996_2015" src="https://github.com/user-attachments/assets/9fc391e0-1d2a-42ae-abff-ca601b6d3908" />
-<img width="194" height="300" alt="v16_tp90pct_mean_intensity_map_20yr_1996_2015" src="https://github.com/user-attachments/assets/0f0b245e-bb11-4646-8196-f1d771c060e6" />
-&nbsp;  
-&nbsp;&nbsp;**at version 2024:** *Maps of Annual Mean Intensity at 90th Percentile for T2M, SST, PREC*    
-<img width="194" height="300" alt="t2m90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/e42b0728-11b4-49dc-851c-5be5c9688a23" />
-<img width="194" height="300" alt="sst90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/8e198470-a3ed-4593-b2bd-16f198cfe0fb" />
-<img width="194" height="300" alt="tp90pct_mean_intensity_map_20yr_2004_2023" src="https://github.com/user-attachments/assets/16f8b99d-c530-4846-a1d2-7a56e9b59371" />
-
-
-- 
-## Data Download
-
-  ```
-  wget --content-disposition "https://www.dropbox.com/scl/fi/pqm64be2s46y8zpq0zn1e/EA1.5_P9095.zip?rlkey=rh8vnut3gzecn4472xycdr0da&st=63cbrbsl&dl=0"
-  ```
-
-***Spatial/Temporal Coverage***  
-
-|         |Domain    |Resolution|
-|---------|----------|----------|
-|**Space**|21-48N, 114-141E|1.5deg|
-|**Time** |1940-2024(ERA5), 1982-2024(OISST)|Daily / Weekly|
+***입력 자료 설명:***  
+&nbsp;&nbsp;&nbsp;&nbsp;자료1: ECMWF Hindcast의 각 버전(버전 2016과 버전 2024)의 평균 기온(T2M), 해수면온도(SST), 강수(PREC) 자료에서 3주(15일~21일)에 해당하는 일 자료로 재구성한 자료임  
+|data1(nc file) information|
+|---------------------------------------------|
+|Dimensions: (time: 7140, latitude: 72, longitude: 72) |
+|Coordinates:|
+|&nbsp;&nbsp;&nbsp;&nbsp;* time (time) datetime64[ns] 57kB 2004-01-19 2004-01-20 ... 2024-01-15|
+|&nbsp;&nbsp;&nbsp;&nbsp;* latitude (latitude) float64 576B 57.0 55.5 54.0 52.5 ... -46.5 -48.0 -49.5|
+|&nbsp;&nbsp;&nbsp;&nbsp;* longitude (longitude) float64 576B 52.5 54.0 55.5 ... 156.0 157.5 159.0|
+|Data variables:|
+|&nbsp;&nbsp;&nbsp;&nbsp;t2m (time, latitude, longitude) float32 148MB|  
   
-***Data format***   
-
-
-
-## Contents  
-
-
-***1. Climate Data*** 
-
-|        |Description|
-|--------|-----------|
-|Frequency         |Daily/Weekly|
-|Variables         |Mean Near Surface Temperature(T2M), Sea Surface Temperature(SST), Total Precipitation(TP)|
-|Type              |Original Timeseries, Climatological Long-Term Mean, 90/95th Percentile Thresholds(p90/p95)|
-|Resources         |ERA5, OISST(only for SST) and ECMWF-hindcast|
-|Ref. Period       |1991-2020(ERA5/OISST, WMO recommendation), 2004-2023(ECMWF-hindcast)|
-
-
-***2. Extreme Event Profile***
-
-|        |Description|
-|--------|-----------|
-|Meta              |***Start/End Date, Duration, Mean/Peak Intensity*** and so forth|            
-|Extreme Thresholds|p90, p95|            
-|Event Criteria    |D3GG, D5G2 for *AHT/MHW* and D1G3, D3G3 for *HR*|
-
->*e.g., D3G5 represents minimum three-day **D**uration, permitting **G**aps of up to five days*  
-
-
-***3. Period(Weekly/Monthly) Extremeness Metrics***  
-
-
-|Metric         |Description|
-|---------------|-----------|
-|Extreme Days      |Number of days in the period when *T2M_e/TP_e/SST_e* exceed zero|
-|Max. Intensity    |Peak *T2M_e/TP_e/SST_e* observed during the period|
-|Impact Factor     |Cumulative *T2M_e/TP_e/SST_e* over the period|
-
->*T2M_e = T2M - thr; TP_e = TP - thr; SST_e = SST - thr*  
-
-
-## How to use:   
-
-### Codes for Data Processing and Visualization
-&nbsp;&nbsp;&nbsp;&nbsp;if codes given: how to read the data and to isolate/plot timeseries of specific grid point?  
-&nbsp;&nbsp;&nbsp;&nbsp;how about adding a table describing example codes given?  
-
-### Ouput Details
-&nbsp;&nbsp;&nbsp;&nbsp;if codes given: how to read the data and to isolate/plot timeseries of specific grid point?  
- 
-*for individual grid points within EA domain,*  
+(※ ECMWF Hindcast의 초기 날짜는 버전마다 다름)  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;자료2: 자료 1에서 ECMWF Hindcast의 버전 2016과 버전 2024의 초기 날짜(forecast issued date) 기반으로 T2M, SST, PREC에서 90퍼센타일을 초과하는 이상 발생 정보, 예를 들면, 90퍼센타일을 초과하는 날에 대한 평년 빈도 및 평년 강도를 계산한 자료임  
+|data2(nc file) information|
+|---------------------------------------------|
+|Dimensions: (latitude: 72, longitude: 72, doy: 356) |
+|Coordinates:|
+|&nbsp;&nbsp;&nbsp;&nbsp;* latitude (latitude) float64 576B 57.0 55.5 54.0 ... -46.5 -48.0 -49.5|
+|&nbsp;&nbsp;&nbsp;&nbsp;* longitude (longitude) float64 576B 52.5 54.0 55.5 ... 156.0 157.5 159.0|
+|&nbsp;&nbsp;&nbsp;&nbsp; quantile      float64 8B ...|
+|&nbsp;&nbsp;&nbsp;&nbsp;* doy (doy) int64 3kB 1 3 4 5 6 7 8 ... 360 361 362 363 364 365 366|
+|Data variables:|
+|&nbsp;&nbsp;&nbsp;&nbsp;t2m_clim90th (doy, latitude, longitude) float64 15MB|  
   
-***1. Historical Event Statistics***  
-- List of Events: *AHT, HR, MHW*  
-- Event Statistics: Frequeny, Duration, Mean Intensity  
-- Daily/Weekly Timeseries and Extremeness  
+&nbsp;  
+  
+***자료(nc files)를 plot하는 방법:***  
+&nbsp;&nbsp;&nbsp;&nbsp;예제 코드 1: [90퍼센타일을 초과하는 날에 대한 평년 빈도 및 평년 강도 맵]  
+&nbsp;&nbsp;&nbsp;&nbsp;자료 1에서 ECMWF Hindcast의 버전 2016과 버전 2024의 초기 날짜(forecast issued date) 기반으로 90퍼센타일을 초과하는 이상 발생 정보, 예를 들면, 90퍼센타일을 초과하는 날에 대한 평년 빈도 및 평년 강도를 계산해서 (맵으로) 표출했다.  
+<img width="200" height="325" alt="plot_v2024_t2m_90th_frequency_test" src="https://github.com/user-attachments/assets/f3140b0d-2056-4b78-90f0-348a96d35e6e" />
+<img width="200" height="325" alt="plot_v2024_t2m_90th_intensity_test" src="https://github.com/user-attachments/assets/3693c368-b78a-4a20-964a-e7ef9f202713" />
 
-***2. Seasonality and Trend of Climate Extremes***  
-- Seasonal Evolution of Event Frequency/Duration/Mean Intensity  
-- Annual Timeseries of Frequency/Duration/Mean Intensity per Year and its Least-Squared Fitted Line
+&nbsp;&nbsp;&nbsp;&nbsp;예제 코드 2: [90퍼센타일을 초과하는 날에 대한 선 그래프]  
+&nbsp;&nbsp;&nbsp;&nbsp;또한, 자료 1과 2를 이용해서 초기 날짜 기반으로 2023년 (버전 2016의 경우 2012년)에서 90퍼센타일을 초과하는 날에 대한 선 그래프를 표출했다.  
+&nbsp;&nbsp;&nbsp;&nbsp;버전 2024년의 경우, 2004년부터 2023년까지의 평년 평균 기온은 초록색 선, 90퍼센타일을 초과하는 평년 평균 기온은 빨강색 선, 2023년의 평균 기온은 검정색 선으로 표출했는데, 이때, 2023년 대비 90퍼센타일을 초과하는 평년 평균 기온을 초과하는 경우에 대해서는 빨강색 면적으로 표출했다.  
+<img width="600" height="525" alt="Lineplot_t2m_90th_Extreme2023" src="https://github.com/user-attachments/assets/5f9933aa-630a-43c2-9ba9-28c430cda32d" />
 
 
