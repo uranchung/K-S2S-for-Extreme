@@ -55,6 +55,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;빨강색 선: 2004–2023년 90퍼센타일 초과 평년값  
 &nbsp;&nbsp;&nbsp;&nbsp;검정색 선: 2023년 평균 기온  
 &nbsp;&nbsp;&nbsp;&nbsp;빨간 면적: 2023년 평균 기온이 90퍼센타일 초과 평년값보다 높은 구간  
-<img width="600" height="525" alt="Lineplot_t2m_90th_Extreme2023" src="https://github.com/user-attachments/assets/5f9933aa-630a-43c2-9ba9-28c430cda32d" />
+
 
 
