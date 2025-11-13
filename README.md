@@ -50,7 +50,7 @@
 <img width="200" height="325" alt="plot_v2024_t2m_90th_intensity_test" src="https://github.com/user-attachments/assets/3693c368-b78a-4a20-964a-e7ef9f202713" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;**예제 코드 2:** [90퍼센타일 초과 선 그래프]  
-&nbsp;&nbsp;&nbsp;&nbsp;또한, 특정 연도(예: 2023년, 버전 2024 기준)의 일별 평균기온(T2M)을 평년값(90퍼센타일-기준)과 비교하여 선 그래프로 나타냄. 그래서, 특정 연도의 이상고온 구간을 시작적으로 보여줌 
+&nbsp;&nbsp;&nbsp;&nbsp;또한, 특정 연도(예: 2023년, 버전 2024 기준)의 일별 평균기온(T2M)을 평년값(90퍼센타일-기준)과 비교하여 선 그래프로 나타냄. 그래서, 특정 연도의 이상고온 구간을 시작적으로 보여줌  
 &nbsp;&nbsp;&nbsp;&nbsp;초록색 선: 2004–2023년 평년 평균 기온  
 &nbsp;&nbsp;&nbsp;&nbsp;빨강색 선: 2004–2023년 90퍼센타일 초과 평년값  
 &nbsp;&nbsp;&nbsp;&nbsp;검정색 선: 2023년 평균 기온  
