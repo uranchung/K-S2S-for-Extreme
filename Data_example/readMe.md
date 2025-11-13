@@ -1,1 +1,20 @@
+# 🌏 ECMWF Hindcast Extreme Events over East Asia
+
+This repository provides ECMWF Hindcast (versions 2016 and 2024) data focusing on **extreme events** in East Asia,  
+where mean temperature (T2M), sea surface temperature (SST), or precipitation (PREC) exceed the **90th percentile** threshold.
+
+---
+
+## 📦 Input Data Description
+
+### **Data 1**
+NetCDF files reconstructed from ECMWF Hindcast versions **2016** and **2024**, containing:
+- Mean temperature (T2M)
+- Sea surface temperature (SST)
+- Precipitation (PREC)
+
+For each forecast initialization date, data corresponding to **lead week 3 (days 15–21 after initialization)**  
+were extracted and reorganized into daily records.
+
+**Example (T2M file structure):**
 
