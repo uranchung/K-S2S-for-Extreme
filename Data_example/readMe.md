@@ -1,6 +1,6 @@
 # 🌏 ECMWF Hindcast Extreme Events over East Asia
 
-These six NetCDF data provide ECMWF Hindcast (versions 2016 and 2024) data focusing on **extreme events** in East Asia,  
+These data 1 and 2 provide ECMWF Hindcast (versions 2016 and 2024) data focusing on **extreme events** in East Asia,  
 where mean temperature (T2M), sea surface temperature (SST), or precipitation (PREC) exceed the **90th percentile** threshold.
 
 ---
