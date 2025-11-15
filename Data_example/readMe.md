@@ -17,4 +17,4 @@ For each forecast initialization date, data corresponding to **lead week 3 (days
 were extracted and reorganized into daily records.
 
 ### **Data 2**  
-Based on data 1, the file is composed by calculating the normal value of 90 percentile by date based on the initial date of each version of ECMWF Hindcast.  
+Based on *Data 1*, 90th-percentile climatological thresholds (`t2m_clim90th`) were computed for each ECMWF Hindcast version using the forecast issued dates.  
