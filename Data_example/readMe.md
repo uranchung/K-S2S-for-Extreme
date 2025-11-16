@@ -5,6 +5,17 @@ where mean temperature (T2M), sea surface temperature (SST), or precipitation (P
 
 ---
 
+***Spatial/Temporal Coverage***  
+
+|         |Domain    |Resolution|
+|---------|----------|----------|
+|**Space**|21-48N, 114-141E|1.5deg|
+|**Time** |1940-2024(ERA5), 1982-2024(OISST)|Daily / Weekly|
+
+&nbsp;  
+***Data format***   
+  
+&nbsp;
 ## Contents (-> Data? or Data Description)
 
 ***1. Climate Data*** 
