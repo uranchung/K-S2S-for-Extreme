@@ -32,18 +32,6 @@ This code generates a line plot illustrating the temporal evolution of mean temp
 
 ---
 
-## 🌐 Spatial & Temporal Coverage
-
-| Parameter | Details |
-|------------|----------|
-| **Domain** | 21–48° N, 114–141° E |
-| **Resolution** | 1.5° × 1.5° |
-| **Period** | 1996–2015 (ver. 2016), 2004–2023 (ver. 2024) |
-| **Time Step** | Weekly (lead week 3 = 15–21 days) |
-| **Format** | NetCDF |
-
----
-
 ## 🗃️ Data Sources
 
 - ECMWF Hindcast datasets (Versions 2016 & 2024)  
