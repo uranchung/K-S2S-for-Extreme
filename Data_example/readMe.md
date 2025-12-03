@@ -16,7 +16,7 @@ where mean temperature (T2M), sea surface temperature (SST), or precipitation (P
 ***Data format***   
   
 &nbsp;
-## Data Description)
+## Data Description
 
 ***1. Climate Data*** 
 
