@@ -1,3 +1,5 @@
+<img width="3386" height="987" alt="Case_wk3_init20250917_anomaly" src="https://github.com/user-attachments/assets/c28f8531-c979-4897-99b7-bffb69458883" />
+<img width="3386" height="947" alt="Case_wk3_init20250917_P90_event" src="https://github.com/user-attachments/assets/a0913807-df60-4ef9-9a85-417db6ff825b" />
 # 📊 사례 분석 (Case Study): Week 3 극한 고온 예측 비교
 
 ECMWF Raw 앙상블과 딥러닝 기반 보정 모델(`Member-reg: no spread`, `Member-reg + MC dropout`, `Season-weighted mix`)의 선행 3주차(Week 3) TMAX 편차 및 P90 초과 확률 예측 성능을 ERA5 관측과 비교한 사례 분석입니다.
