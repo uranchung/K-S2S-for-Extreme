@@ -21,9 +21,11 @@ ECMWF Raw 앙상블과 딥러닝 기반 보정 모델(`Member-reg: no spread`, `
 * **P90 초과 확률**: 관측(ERA5)에서 P90을 넘은 북쪽 영역을 `ECMWF raw`는 거의 0으로 예측했지만, `Season-weighted mix`는 0.2–0.4의 낮은 확률로나마 포착했습니다.
 
 #### 그림 1-1. TMAX 편차 (`°C`)
+<img width="3386" height="987" alt="Case_wk3_init20250813_anomaly" src="https://github.com/user-attachments/assets/e60a84bb-0a31-4ade-88ba-e9488606b0b3" />
 
 
 #### 그림 1-2. P90 초과 확률 (관측은 초과 여부 0/1)
+<img width="3386" height="947" alt="Case_wk3_init20250813_P90_event" src="https://github.com/user-attachments/assets/323d67a9-4cfd-49e0-9439-5e03fc63c62a" />
 
 
 > **요약**: 2025년 8월 13일 초기화된 선행 3주차(8월 28일 시작 주간) 사례에서 `Season-weighted mix`는 몽골·북중국 지역의 과도한 음의 편차를 완화해 ERA5 관측 패턴에 근접한 기온 편차를 모의했습니다. 특히 관측(ERA5)에서 P90을 초과한 북부 영역을 `ECMWF raw`는 거의 0에 가까운 확률로 놓친 반면, `Season-weighted mix`는 0.2–0.4 수준의 확률 신호를 포착했으며 한반도 내 양의 편차 역시 안정적으로 유지했습니다.
