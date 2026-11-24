@@ -1,60 +1,46 @@
-# 🌍Climate Extremes from ECMWF Hindcast 🌍
+# 📊 사례 분석 (Case Study): Week 3 극한 고온 예측 비교
 
-## ECMWF Hindcast 버전2016과 버전2024 자료에서 한반도를 포함한 동아시아 지역의 극한 정보 표출!
+ECMWF Raw 앙상블과 딥러닝 기반 보정 모델(`Member-reg: no spread`, `Member-reg + MC dropout`, `Season-weighted mix`)의 선행 3주차(Week 3) TMAX 편차 및 P90 초과 확률 예측 성능을 ERA5 관측과 비교한 사례 분석입니다.
 
-이 repository에서는 ECWMF 버전 2016과 버전 2024의 Hindcast 자료를 기반으로 동아시아 지역에서 **평균기온**, **해수면 온도**, **강수**가 90퍼센타일(예, T2M>=90 percentile)을 초과하는 이상 발생 정보(예, 발생 빈도 및 발생 강도 등)를 제공한다.  
-(English) This repository provides ECMWF 2016 and 2024 Hindcast data on extreme events in East Asia, where mean temperature, sea surface temperature, or precipitation exceed the 90th percentile.  
-&nbsp;  
-***Spatial/Temporal Coverage for ECMWF Hindcast***  
+### 비교 대상 패널 구성 (왼쪽부터)
+| 순서 | 모델 / 자료 | 설명 |
+| :--- | :--- | :--- |
+| 1 | **ERA5 (OBS)** | 재분석 관측 자료 (P90 초과 여부는 0 또는 1 이진값) |
+| 2 | **ECMWF raw** | ECMWF 원시 앙상블 예측 |
+| 3 | **Member-reg: no spread** | 멤버 회귀 기반 보정 모델 (스프레드 미반영) |
+| 4 | **Member-reg + MC dropout** | 멤버 회귀 + Monte Carlo Dropout 적용 모델 |
+| 5 | **Season-weighted mix** | 계절 가중 혼합 보정 모델 |
 
-|               |Domain     |Resolution|
-|---------------|-----------|----------|
-|**Space**      |21-48N, 114-141E|1.5deg|
-|**Time**       |1940-2024(ERA5), 1982-2024(OISST)|Daily / Weekly|
-|**Data format**|NetCDF |
-|**Data download**| Google drive|
+---
 
-&nbsp;  
-***입력 자료 설명:***  
-&nbsp;&nbsp;&nbsp;&nbsp;자료1: ECMWF Hindcast의 각 버전(버전 2016과 버전 2024)의 **평균기온(T2M)**, **해수면온도(SST)**, **강수(PREC)** 자료에서 예측 초기일(forecast issued date) 이후 **3번째 주(lead week, 15일~21일)에** 해당하는 **주별(day-of-week)자료**를 추출하여 재구성한 NetCDF 파일임  
-|data1(nc file) information|
-|---------------------------------------------|
-|Dimensions: (time: 7140, latitude: 72, longitude: 72) |
-|Coordinates:|
-|&nbsp;&nbsp;&nbsp;&nbsp;* time (time) datetime64[ns] 57kB 2004-01-19 2004-01-20 ... 2024-01-15|
-|&nbsp;&nbsp;&nbsp;&nbsp;* latitude (latitude) float64 576B 57.0 55.5 54.0 52.5 ... -46.5 -48.0 -49.5|
-|&nbsp;&nbsp;&nbsp;&nbsp;* longitude (longitude) float64 576B 52.5 54.0 55.5 ... 156.0 157.5 159.0|
-|Data variables:|
-|&nbsp;&nbsp;&nbsp;&nbsp;t2m (time, latitude, longitude) float32 148MB|  
-  
-(※ ECMWF Hindcast의 초기 날짜는 버전마다 다름)  
-&nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;자료2: 자료 1을 바탕으로 ECMWF Hindcast의 버전별 초기일(forecast issued date) 기준으로 일자별 90퍼센타일을 평년값을 계산하여 구성한 파일임(아래 정보는 T2M에 대한 것임)  
-|data2(nc file) information|
-|---------------------------------------------|
-|Dimensions: (latitude: 72, longitude: 72, doy: 356) |
-|Coordinates:|
-|&nbsp;&nbsp;&nbsp;&nbsp;* latitude (latitude) float64 576B 57.0 55.5 54.0 ... -46.5 -48.0 -49.5|
-|&nbsp;&nbsp;&nbsp;&nbsp;* longitude (longitude) float64 576B 52.5 54.0 55.5 ... 156.0 157.5 159.0|
-|&nbsp;&nbsp;&nbsp;&nbsp; quantile      float64 8B ...|
-|&nbsp;&nbsp;&nbsp;&nbsp;* doy (doy) int64 3kB 1 3 4 5 6 7 8 ... 360 361 362 363 364 365 366|
-|Data variables:|
-|&nbsp;&nbsp;&nbsp;&nbsp;t2m_clim90th (doy, latitude, longitude) float64 15MB|  
-  
-&nbsp;  
-  
-***자료(nc files)를 plot하는 방법:***  
-&nbsp;&nbsp;&nbsp;&nbsp;**예제 코드 1:** [90퍼센타일을 초과 빈도 및 강도 맵]  
-&nbsp;&nbsp;&nbsp;&nbsp;자료1과 2를 바탕으로 ECMWF Hindcast의 버전 2016과 버전 2024 자료(자료1)에서 각 예측일의 평균기온(T2M)을 자료2의 90퍼센타일(기준)과 비교하여, 90퍼센타일을 초과하는 날의 빈도와 초과 강도를 계산하여 지도로 표출하였음.  
-<img width="200" height="325" alt="plot_v2024_t2m_90th_frequency_test" src="https://github.com/user-attachments/assets/f3140b0d-2056-4b78-90f0-348a96d35e6e" />
-<img width="200" height="325" alt="plot_v2024_t2m_90th_intensity_test" src="https://github.com/user-attachments/assets/3693c368-b78a-4a20-964a-e7ef9f202713" />
+## 1. 사례 분석: 2025년 8월 말 고온 (`init: 2025-08-13`, Week 3)
 
-&nbsp;&nbsp;&nbsp;&nbsp;**예제 코드 2:** [90퍼센타일 초과 선 그래프]  
-&nbsp;&nbsp;&nbsp;&nbsp;또한, 특정 연도(예: 2023년, 버전 2024 기준)의 3주간(15~21일) 7일의 일별 평균기온(T2M)을 평년값(90퍼센타일-기준)과 비교하여 선 그래프로 나타냄. 그래서, 특정 연도의 이상고온 구간을 시각적으로 보여줌  
-&nbsp;&nbsp;&nbsp;&nbsp;초록색 선: 2004–2023년 평년 평균 기온  
-&nbsp;&nbsp;&nbsp;&nbsp;빨강색 선: 2004–2023년 90퍼센타일 초과 평년값  
-&nbsp;&nbsp;&nbsp;&nbsp;검정색 선: 2023년 평균 기온  
-&nbsp;&nbsp;&nbsp;&nbsp;빨간 면적: 2023년 평균 기온이 90퍼센타일 초과 평년값보다 높은 구간  
+**2025년 8월 28일에 시작하는 주** (2025년 8월 13일 초기화, 선행 3주차 / Week 3)를 분석했습니다.
+
+* **TMAX 편차 (`°C`)**: 모든 방식이 북쪽(몽골·북중국)에 음의 편차를 예측했으나, `Season-weighted mix`는 그 폭이 `ECMWF raw`보다 작아 관측(ERA5)에 더 가까웠습니다. 한반도의 양의 편차도 다른 훈련 모델(`Member-reg`, `Member-reg + MC dropout`)보다 관측 및 ECMWF와 유사했습니다.
+* **P90 초과 확률**: 관측(ERA5)에서 P90을 넘은 북쪽 영역을 `ECMWF raw`는 거의 0으로 예측했지만, `Season-weighted mix`는 0.2–0.4의 낮은 확률로나마 포착했습니다.
+
+#### 그림 1-1. TMAX 편차 (`°C`)
 
 
+#### 그림 1-2. P90 초과 확률 (관측은 초과 여부 0/1)
 
+
+> **요약**: 2025년 8월 13일 초기화된 선행 3주차(8월 28일 시작 주간) 사례에서 `Season-weighted mix`는 몽골·북중국 지역의 과도한 음의 편차를 완화해 ERA5 관측 패턴에 근접한 기온 편차를 모의했습니다. 특히 관측(ERA5)에서 P90을 초과한 북부 영역을 `ECMWF raw`는 거의 0에 가까운 확률로 놓친 반면, `Season-weighted mix`는 0.2–0.4 수준의 확률 신호를 포착했으며 한반도 내 양의 편차 역시 안정적으로 유지했습니다.
+
+---
+
+## 2. 사례 분석: 2025년 10월 초 고온 (`init: 2025-09-17`, Week 3)
+
+**2025년 10월 2일에 시작하는 주** (2025년 9월 17일 초기화, 선행 3주차 / Week 3, `2025-10-02 ~ 2025-10-08`)를 분석했습니다.
+
+* **TMAX 편차 (`°C`)**: 관측(ERA5)에서는 중국 동부·남부, 몽골 동부·만주, 한반도, 일본 등 동아시아 전역에 걸쳐 강한 양의 기온 편차가 광범위하게 나타났습니다. `ECMWF raw`와 모든 보정 모델이 전반적인 양의 편차를 모의했으나 관측 대비 강도는 다소 과소모의하는 경향을 보였습니다. 그중 `Season-weighted mix`는 일본·동해 및 동아시아 북동부의 양의 편차 패턴을 안정적으로 유지하며 `ECMWF raw` 및 관측 패턴과 일관된 공간 분포를 나타냈습니다.
+* **P90 초과 확률**: 관측(ERA5)에서 한반도, 일본, 중국 동부 및 주변 해역 대부분이 P90을 초과(1.0)했습니다. `Member-reg: no spread`는 서해·한반도 서부 등 특정 영역에 확률이 국지적으로 집중되는 경향을 보였고, `Member-reg + MC dropout`은 전반적으로 완만하게 퍼진 중간 수준 확률을 보였습니다. 반면 `Season-weighted mix`는 동해·일본 부근의 높은 확률 신호와 한반도·서해·중국 동부의 P90 초과 가능성을 과도한 국지적 왜곡 없이 균형 있게 포착했습니다.
+
+#### 그림 2-1. TMAX 편차 (`°C`)
+
+
+#### 그림 2-2. P90 초과 확률 (관측은 초과 여부 0/1)
+
+
+> **요약**: 2025년 9월 17일 초기화된 선행 3주차(10월 2일 시작 주간) 사례에서 동아시아 전반의 광범위한 고온 현상에 대해 모든 모델이 양의 편차 경향을 포착했으나, 관측 대비 강도는 완만하게 모의되었습니다. P90 초과 확률에서는 `Season-weighted mix`가 일본·동해의 고확률 영역뿐만 아니라 한반도와 중국 동부의 초과 신호까지 국지적 편중 없이 균형 있게 예측했습니다.
