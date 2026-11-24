@@ -1,5 +1,5 @@
 
-
+# 2026 Research: 
 # 📊 사례 분석 (Case Study): Week 3 극한 고온 예측 비교
 
 ECMWF Raw 앙상블과 딥러닝 기반 보정 모델(`Member-reg: no spread`, `Member-reg + MC dropout`, `Season-weighted mix`)의 선행 3주차(Week 3) TMAX 편차 및 P90 초과 확률 예측 성능을 ERA5 관측과 비교한 사례 분석입니다.
